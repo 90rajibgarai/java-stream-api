@@ -46,7 +46,7 @@ Example of Anonymous Method :
 ---------------------------------------------------------------------------------------------------------------------------	
 3)	What is Functional Interface ?
 
--> The function who contains only one abstarct method but can have multiple default and static method is called functional interface.
+-> The interface who contains only one abstarct method but can have multiple default and static method is called functional interface.
 
  Functional Interface define as @FunctionalInterface	<= But annotation is not mendatory.
 	
