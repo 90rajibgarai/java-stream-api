@@ -16,18 +16,16 @@
 
 		i) Sort ArrayList (Primitive/Object)
 		ii) Sort Map (Primitive/Object)
-	
-: Documentation : 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-1) What is Java Lambda Expression ?
-
--> The expression through which we can represent an Anonymous function.
+What is Java Lambda Expression ?
+---------------------------------------------------------------------------------------------------------------------------
+The expression through which we can represent an Anonymous function.
 
 ---------------------------------------------------------------------------------------------------------------------------
-2) What is Anonymous function ?
-
--> A method who don't have any name or modifier.
+What is Anonymous function ?
+---------------------------------------------------------------------------------------------------------------------------
+A method who don't have any name or modifier.
 
  Anonymous : Nameless/Unknown
  
@@ -43,12 +41,12 @@ Example of Anonymous Method :
 	() {
 		System.out.println("Anonymous Method");
 	}
----------------------------------------------------------------------------------------------------------------------------	
-3)	What is Functional Interface ?
+---------------------------------------------------------------------------------------------------------------------------
+What is Functional Interface ?
+---------------------------------------------------------------------------------------------------------------------------
+The interface who contains only one abstarct method but can have multiple default and static method is called functional interface.
 
--> The interface who contains only one abstarct method but can have multiple default and static method is called functional interface.
-
- Functional Interface define as @FunctionalInterface	<= But annotation is not mendatory.
+Functional Interface define as @FunctionalInterface	<= But annotation is not mendatory.
 	
 Example :
 
@@ -83,12 +81,14 @@ Example of custome Functional Interface :
 		System.out.println(mfi.substruct(12, 20));
 	}
 ---------------------------------------------------------------------------------------------------------------------------
-4) Java 8 - Consumer, Predicate, Supplier 
-
+What do you know about - Consumer, Predicate, Supplier in Java 8 ?
+---------------------------------------------------------------------------------------------------------------------------
 -> Consumer, Predicate, Supplier there are theree Functional Interfaces internally used in java stream API.
 
 ----------------------------------------------------------------------------------------------------------------------------------
-Consumer : Whenever we need to a object as a inpunt and base on the input you do some operation and you don't return anything.
+Consumer : 
+----------------------------------------------------------------------------------------------------------------------------------
+Whenever we need to a object as a inpunt and base on the input you do some operation and you don't return anything.
 
 	-------------------------------------------------------------------------------------------
 	@FunctionalInterface
@@ -105,8 +105,10 @@ Consumer : Whenever we need to a object as a inpunt and base on the input you do
 	list.stream().forEach(t -> System.out.println("Marks : "+t));	// In Java Stream Example
 	-------------------------------------------------------------------------------------------
 	
---------------------------------------------------------------------------------------------------------------------------------------	
-Predicate : This interface normaly we are used for conditional statement. when we check any condition and response as true/ false then we used that inferface.
+----------------------------------------------------------------------------------------------------------------------------------	
+Predicate : 
+----------------------------------------------------------------------------------------------------------------------------------
+This interface normaly we are used for conditional statement. when we check any condition and response as true/ false then we used that inferface.
 	
 	-------------------------------------------------------------------------------------------
 	@FunctionalInterface
@@ -115,8 +117,10 @@ Predicate : This interface normaly we are used for conditional statement. when w
 		boolean test(T t);
 	}
 	-------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------	
-Supplier : Here we are not input any thing but expected output.
+-----------------------------------------------------------------------------------------------------------------------------------	
+Supplier : 
+----------------------------------------------------------------------------------------------------------------------------------
+Here we are not input any thing but expected output.
 
 	-------------------------------------------------------------------------------------------
 	@FunctionalInterface
@@ -125,19 +129,19 @@ Supplier : Here we are not input any thing but expected output.
 		T get();
 	}
 	-------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------------------------	
-4) What is Java Stream API ?
-
--> Java Stream API introduce in java 8, It is used to process collections of objects.
+---------------------------------------------------------------------------------------------------------------------------------	
+What is Java Stream API ?
+----------------------------------------------------------------------------------------------------------------------------------
+Java Stream API introduce in java 8, It is used to process collections of objects.
 
 A stream is not a data substruct instead it takes input from the Collections, Arrays or I/O channels.
 	
 Stream don't change the original data substruct, they only provide the result as per the pipelined methods.
 
 --------------------------------------------------------------------------------------------------------------------------------------
-5)  Why we need Stream API ?
-
--> Advantages following below :
+Why we need Stream API ?
+----------------------------------------------------------------------------------------------------------------------------------
+Advantages following below :
 
 1) Functional Programming : i.e. We can achive FunctionalInterface with lambda.
 
@@ -146,11 +150,10 @@ Stream don't change the original data substruct, they only provide the result as
 3) Bulk Operation : Compare to our triditional approch Stream give us better performance.
 	
 --------------------------------------------------------------------------------------------------------------------------------------
-6) Java Stream API's Methods :
-
--> Java Stream API methods : 
-
+Java Stream API's Methods :
+----------------------------------------------------------------------------------------------------------------------------------
 A) forEach :- For Iteration
+----------------------------------------------------------------------------------------------------------------------------------
 
 	----------------------------------------------------------------------------------------------------------------------
 	friends.stream().forEach(f -> System.out.println("Friend name : "+f));	//--Use Stream API : List Iteration--
@@ -160,7 +163,7 @@ A) forEach :- For Iteration
 	----------------------------------------------------------------------------------------------------------------------
 	
 B) Filter :- For Conditional Chek
-
+----------------------------------------------------------------------------------------------------------------------------------
 	----------------------------------------------------------------------------------------------------------------------
 	friends.stream().filter(f -> f.startsWith("R")).forEach(f -> System.out.println("Friend name : "+f));	//--Use Stream API : List Filter--
 	
@@ -172,7 +175,7 @@ B) Filter :- For Conditional Chek
 	subjects.entrySet().stream().filter(s -> s.getKey() <= 204).forEach(obj -> System.out.println("Common Sub Code - Name : "+obj.getKey()+" - "+obj.getValue())); //---Use Stream API : Map Filter---
 	----------------------------------------------------------------------------------------------------------------------
 C) Sort :- For Sorting Order 
-
+----------------------------------------------------------------------------------------------------------------------------------
 	Sort From Primitive ArrayList :
 	----------------------------------------------------------------------------------------------------------------------
 	Collections.sort(marks);	//---In Traditional Way => Sort on Ascending order
@@ -192,7 +195,7 @@ C) Sort :- For Sorting Order
 	employees.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);	
 	----------------------------------------------------------------------------------------------------------------------
 D) Sorting For Map :
-
+----------------------------------------------------------------------------------------------------------------------------------
 	----------------------------------------------------------------------------------------------------------------------
 	List<Entry<String, Integer>> entries = new ArrayList<>(numbers.entrySet());		//------Traditional Approach------		
 	Collections.sort(entries, (o1, o2) -> o1.getKey().compareTo(o2.getKey()));
