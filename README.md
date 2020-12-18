@@ -59,7 +59,7 @@ Example of custome Functional Interface :
 
 	public interface MyFunctionalInterface
 	{
-		void substruct(int num1, num2);	// One abstract method
+		void substruct(int num1, int num2);	// One abstract method
 		
 		default void method2() {
 			System.out.println("Default Method 1");
@@ -88,11 +88,11 @@ What do you know about - Consumer, Predicate, Supplier in Java 8 ?
 ----------------------------------------------------------------------------------------------------------------------------------
 Consumer : 
 ----------------------------------------------------------------------------------------------------------------------------------
-Whenever we need to a object as a inpunt and base on the input you do some operation and you don't return anything.
+Whenever we need to a object as a input and base on the input you do some operation and you don't return anything.
 
 	-------------------------------------------------------------------------------------------
 	@FunctionalInterface
-	public inferface Consumer
+	public interface Consumer
 	{
 		void accept(T t);
 	}
